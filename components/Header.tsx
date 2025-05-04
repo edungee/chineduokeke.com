@@ -15,7 +15,7 @@ const Header = () => {
             <MobileNav /> 
             {/* Optional: Add SVG logo here if desired */}
             <Link href="/" className="ml-2 md:ml-0 flex items-center space-x-2">
-                <span className="font-bold sm:inline-block text-lg">Chinedu Okeke</span>
+                {/* <span className="font-bold sm:inline-block text-lg">Chinedu Okeke</span> */}
             </Link>
         </div>
 
