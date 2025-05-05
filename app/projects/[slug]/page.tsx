@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<ProjectPageParams[]> {
 }
 
 // Define metadata generation function (optional but good practice)
-export async function generateMetadata({ params }: { params: ProjectPageParams }) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
     const project = await getProjectData(params.slug);
     return {
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: ProjectPageParams }
 }
 
 // The main page component
-export default async function ProjectPage({ params }: { params: ProjectPageParams }) {
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
   let project;
   try {
     project = await getProjectData(params.slug);
