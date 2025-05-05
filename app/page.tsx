@@ -24,24 +24,28 @@ export default async function HomePage() {
         </h1>
         {/* Ensured intro p is text-base */}
         <p className="text-base text-muted-foreground">
-          Product Leader passionate about building impactful digital experiences. 
-          Exploring the intersection of technology, design, and user needs.
-          Welcome to my corner of the web.
+        Hey there! I&apos;m Chinedu (chee-nay-doo), a Product Manager in the UK. I have spent 13+ years in tech across different roles – including customer support, system analyst and software engineering – and 8 years specifically focused on product. 
+        </p>
+        <p className="text-base text-muted-foreground">
+        I&apos;m fascinated by how obsessively caring about people and their problems can shape strategy and vision. That mindset has helped me build impactful digital experiences – like helping data engineers deliver business-ready data faster at <a href="https://matillion.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">Matillion</a>, or joining <a href="https://risevest.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">Risevest</a> as the first PM to connect users with the best wealth-creating opportunities globally. You can check out more about my work <a href="https://www.linkedin.com/in/chinedu-okeke/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">here</a>.
+        </p>
+        <p className="text-base text-muted-foreground">
+        On a lighter note, I often tell anyone who will listen that if I had stuck with football – the one Americans call soccer – I would have easily cracked the Ballon d&apos;Or top 10 list back in 2011. So, it&apos;s only right I spend my Friday and Saturday evenings playing the beautiful game. Whether that&apos;s to stay fit or fondly remember missed glory... well, that remains a mystery.
         </p>
         {/* Add Social Links Section */}
         <div className="flex items-center space-x-4 pt-2">
           <span className="text-sm text-muted-foreground">Find me on</span>
           <div className="flex items-center space-x-3">
-            <a href="YOUR_TWITTER_LINK" target="_blank" rel="noopener noreferrer" title="Twitter" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://x.com/edunge" target="_blank" rel="noopener noreferrer" title="Twitter" className="text-muted-foreground hover:text-foreground transition-colors">
               <TwitterLogo size={20} />
             </a>
-            <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" title="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://github.com/edungee" target="_blank" rel="noopener noreferrer" title="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
               <GithubLogo size={20} />
             </a>
-            <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://www.linkedin.com/in/chinedu-okeke/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
               <LinkedinLogo size={20} />
             </a>
-            <a href="mailto:YOUR_EMAIL_ADDRESS" title="Email" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="mailto:okekechinedu@yahoo.com" title="Email" className="text-muted-foreground hover:text-foreground transition-colors">
               <EnvelopeSimple size={20} />
             </a>
           </div>

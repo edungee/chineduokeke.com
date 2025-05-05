@@ -11,7 +11,7 @@ import {
 // Optional: Add metadata
 export const metadata = {
   title: "Speaking Engagements",
-  description: "A list of conferences and meetups where Chinedu Okeke has spoken.",
+  description: "A list of conferences, meetups, webinars and mentorship sessions where Chinedu Okeke has spoken.",
 };
 
 export default async function SpeakingPage() {
@@ -34,7 +34,7 @@ export default async function SpeakingPage() {
           Speaking Engagements
         </h1>
         <p className="text-base text-muted-foreground">
-          Here&apos;s a list of my speaking engagements at various venues and conferences.
+          Here&apos;s a list of my speaking engagements at various meetups, webinars and mentorship sessions where I have given back to the product management community.
         </p>
       </header>
 

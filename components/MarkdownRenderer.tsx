@@ -41,6 +41,7 @@ export function MarkdownRenderer({ children, className }: MarkdownRendererProps)
     <div className={cn(
         "prose dark:prose-invert", 
         "prose-headings:font-semibold prose-a:text-primary hover:prose-a:text-primary/80",
+        "prose-h3:text-xl prose-h3:font-medium prose-h3:text-muted-foreground",
         "prose-p:text-foreground/90 prose-li:text-foreground/90", 
         "max-w-none", 
         className 

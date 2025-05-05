@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Chinedu Okeke - Personal Site",
+  title: "Chinedu Okeke - Product Manager",
   description: "Showcasing projects, thoughts, and speaking engagements.",
 };
 
@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head> */}
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

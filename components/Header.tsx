@@ -30,11 +30,11 @@ const Header = () => {
           
           <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
 
-          <a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">YouTube</a>
+          <a href="https://www.youtube.com/@edunge" target="_blank" rel="noopener noreferrer" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">YouTube</a>
           
-          <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
+          {/* <span className="h-4 w-px bg-border/50" aria-hidden="true"></span> */}{/* Separator */}
 
-          <Link href="/blogs" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Blogs</Link>
+          {/* <Link href="/blogs" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Blogs</Link> */}
         </nav>
 
         {/* Right Side: Theme Toggle */}
