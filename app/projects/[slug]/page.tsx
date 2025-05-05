@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // The main page component
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+export default async function ProjectPage({ params }: { params: { slug: string } }) { // Reverted to simpler inline type
   let project;
   try {
     project = await getProjectData(params.slug);
