@@ -36,14 +36,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-// Explicitly define the props type expected by Next.js page
-type Props = {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
 // The main page component
-export default async function ProjectPage({ params }: Props) { // Use the explicit Props type
+export default async function ProjectPage({ params }: { params: { slug: string } }) { // Reverted to simpler inline type
   let project;
   try {
     project = await getProjectData(params.slug);
