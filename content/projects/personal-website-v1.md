@@ -13,7 +13,7 @@ tools:
 tldr: "Developed a performant, statically generated personal site using Next.js 13 App Router and Tailwind CSS for styling."
 repoUrl: "https://github.com/edungee/chineduokeke.com"
 liveUrl: "https://chineduokeke.com"
-videoEmbedUrl: "https://www.youtube.com/embed/jVXA72u8lzY?si=UjJXxcY0DWsC401n"
+videoEmbedUrl: "https://www.youtube.com/embed/G50FXKiT68U?si=BGYY9iwR2loPS8_K"
 designImages: []
 ---
 
