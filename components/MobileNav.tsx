@@ -23,7 +23,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { href: "/", title: "Home" },
   { href: "/speaking", title: "Speaking" },
-  { href: "YOUR_YOUTUBE_LINK", title: "YouTube", external: true }, // Replace link
+  { href: "https://www.youtube.com/@edunge", title: "YouTube", external: true }, // Replace link
   { href: "/blogs", title: "Blogs" },
 ];
 
