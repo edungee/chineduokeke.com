@@ -1,6 +1,6 @@
 ---
 title: "The Cost of Assuming Context in Platform Design"
-date: "2025-01-26"
+date: "2026-01-25"
 description: "Why powerful platforms must guide, not just enable — and how assuming context introduces a subtle risk in the product experience."
 published: true
 tags:
@@ -16,7 +16,7 @@ Complex enterprise platforms often invest heavily in upfront enablement. Trainin
 
 This investment is necessary because these platforms are expressive, flexible, and capable of modeling deeply complex problems but that same brilliance introduces a subtle risk.
 
-When a platform assumes that users already understand how it works, that assumption quietly becomes embedded in the product experience itself. 
+When a platform assumes that users already understand how it works, that assumption quietly becomes embedded in the product experience itself.
 
 ## Enablement Turns Into Assumption
 
