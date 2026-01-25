@@ -69,6 +69,7 @@ export default async function HomePage() {
                 title={post.title}
                 description={post.description}
                 date={post.date}
+                tags={post.tags}
               />
             ))}
             {allPosts.length > 3 && (

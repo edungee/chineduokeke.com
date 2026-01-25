@@ -9,6 +9,7 @@ export interface BlogPostFrontmatter {
   date: string
   description: string
   published?: boolean
+  tags?: string[]
 }
 
 export interface BlogPostData extends BlogPostFrontmatter {

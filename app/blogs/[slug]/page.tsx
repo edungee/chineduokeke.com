@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns'
 import { ArrowBendUpLeft } from '@phosphor-icons/react/dist/ssr'
 import { getBlogPostData, getAllBlogSlugs } from '@/lib/blogs'
 import { MarkdownRenderer } from '@/components/MarkdownRenderer'
+import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -49,13 +50,22 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3">{post.title}</h1>
           <time
             dateTime={post.date}
-            className="text-sm text-muted-foreground font-mono tabular-nums"
+            className="text-sm text-muted-foreground font-mono tabular-nums block"
           >
             {format(parseISO(post.date), 'MMMM d, yyyy')}
           </time>
+          {post.tags && post.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-3">
+              {post.tags.map((tag) => (
+                <Badge key={tag} variant="secondary" className="text-xs font-normal">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          )}
         </header>
 
-        <section className="prose-headings:mt-8 prose-headings:scroll-mt-20">
+        <section>
           <MarkdownRenderer>{post.content}</MarkdownRenderer>
         </section>
       </article>

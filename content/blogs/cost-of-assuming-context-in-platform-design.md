@@ -1,15 +1,20 @@
 ---
 title: "The Cost of Assuming Context in Platform Design"
 date: "2025-01-25"
-description: "Why powerful platforms must guide, not just enable—and how assuming context becomes a crack in the product experience."
+description: "Why powerful platforms must guide, not just enable — and how assuming context introduces a subtle risk in the product experience."
 published: true
+tags:
+  - platform design
+  - product management
+  - UX
+  - enterprise
 ---
 
 As I spend more time in enterprise software and system, it becomes more apparent to me where some of the biggest cracks lie. Powerful platforms rarely fail because they lack capability, they fail because they assume too much context from their users.
 
 Complex enterprise platforms often invest heavily in upfront enablement. Training programs, certification paths, documentation, and best-practice guides are created to ensure users are prepared before they build anything meaningful.
 
-This investment is necessary. These platforms are expressive, flexible, and capable of modeling deeply complex problems but that same brilliance introduces a subtle risk.
+This investment is necessary because these platforms are expressive, flexible, and capable of modeling deeply complex problems but that same brilliance introduces a subtle risk.
 
 When a platform assumes that users already understand how it works, that assumption quietly becomes embedded in the product experience itself.
 
@@ -29,7 +34,7 @@ The issue isn't a lack of documentation. It's that context is static, while the 
 
 ## A Tracking Shot for Platform UX
 
-By exploring the concept of a tracking shot from filmmaking, I hope to clearly drive this point home.
+By exploring the concept of a **tracking shot** from filmmaking, I hope to clearly drive this point home.
 
 In a tracking shot, the camera moves alongside the subject, keeping them in focus as the environment changes. The viewer remains oriented, even as complexity increases.
 
@@ -81,16 +86,16 @@ This requires foundational systems:
 
 These capabilities introduce real tradeoffs: performance cost, cognitive noise, and the risk of over-guidance. Managing those tradeoffs is a platform product responsibility.
 
+
 ## Expert Tool to Empowering System
 
 The most durable platforms don't just enable experts, they create them.
 
 By delivering context dynamically and at the point of need, platforms reduce friction, accelerate adoption, and allow users to tackle more complex problems with confidence.
 
-The leverage compounds.
-
+- The leverage compounds.
 - Support costs fall.
 - Adoption increases.
 - Capability spreads.
 
-The difference between a powerful tool and a scalable platform is not how much it can do, but how well it guides users as they do it—that is the real challenge of platform design.
+The difference between a powerful tool and a scalable platform is not how much it can do, but how well it guides users as they do it — that is the real challenge of platform design.

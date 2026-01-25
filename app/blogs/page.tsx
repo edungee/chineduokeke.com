@@ -30,6 +30,7 @@ export default async function BlogsPage() {
                 title={post.title}
                 description={post.description}
                 date={post.date}
+                tags={post.tags}
               />
             ))}
           </div>
