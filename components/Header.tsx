@@ -34,7 +34,7 @@ const Header = () => {
           
           {/* <span className="h-4 w-px bg-border/50" aria-hidden="true"></span> */}{/* Separator */}
 
-          {/* <Link href="/blogs" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Blogs</Link> */}
+          <Link href="/blogs" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Blog</Link>
         </nav>
 
         {/* Right Side: Theme Toggle */}
