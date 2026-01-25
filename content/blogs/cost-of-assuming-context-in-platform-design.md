@@ -1,6 +1,6 @@
 ---
 title: "The Cost of Assuming Context in Platform Design"
-date: "2025-01-25"
+date: "2025-01-26"
 description: "Why powerful platforms must guide, not just enable — and how assuming context introduces a subtle risk in the product experience."
 published: true
 tags:
