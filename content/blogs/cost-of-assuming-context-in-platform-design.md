@@ -16,7 +16,7 @@ Complex enterprise platforms often invest heavily in upfront enablement. Trainin
 
 This investment is necessary because these platforms are expressive, flexible, and capable of modeling deeply complex problems but that same brilliance introduces a subtle risk.
 
-When a platform assumes that users already understand how it works, that assumption quietly becomes embedded in the product experience itself.
+When a platform assumes that users already understand how it works, that assumption quietly becomes embedded in the product experience itself. 
 
 ## Enablement Turns Into Assumption
 
