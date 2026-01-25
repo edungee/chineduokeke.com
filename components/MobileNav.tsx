@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
   { href: "/", title: "Home" },
   { href: "/speaking", title: "Speaking" },
   { href: "https://www.youtube.com/@edunge", title: "YouTube", external: true }, // Replace link
-  { href: "/blogs", title: "Blogs" },
+  { href: "/blogs", title: "Blog" },
 ];
 
 export function MobileNav() {

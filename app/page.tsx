@@ -1,6 +1,9 @@
 import React from 'react';
-import { getSortedProjectsData } from '@/lib/projects'; // Import data fetching function
-import { ProjectList } from '@/components/ProjectList'; // Import the new client component
+import Link from 'next/link';
+import { getSortedProjectsData } from '@/lib/projects';
+import { getSortedBlogPostsData } from '@/lib/blogs';
+import { ProjectList } from '@/components/ProjectList';
+import BlogCard from '@/components/BlogCard';
 // Import Phosphor Icons
 import {
   TwitterLogo,
@@ -11,7 +14,9 @@ import {
 
 // The main page remains a Server Component
 export default async function HomePage() {
-  const allProjects = getSortedProjectsData(); // Fetch ALL sorted project data
+  const allProjects = getSortedProjectsData();
+  const allPosts = getSortedBlogPostsData();
+  const topPosts = allPosts.slice(0, 3);
 
   return (
     // Apply max-width and center the main content area
@@ -52,21 +57,47 @@ export default async function HomePage() {
         </div>
       </div>
 
+      {/* Blog Section */}
+      <div id="blog" className="space-y-4 sm:space-y-6">
+        <h2 className="text-xl font-semibold tracking-tight">Blog</h2>
+        {topPosts.length > 0 ? (
+          <div className="flex flex-col space-y-6">
+            {topPosts.map((post) => (
+              <BlogCard
+                key={post.slug}
+                slug={post.slug}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                tags={post.tags}
+              />
+            ))}
+            {allPosts.length > 3 && (
+              <div className="flex justify-end pt-2">
+                <Link
+                  href="/blogs"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
+                >
+                  View more
+                </Link>
+              </div>
+            )}
+          </div>
+        ) : (
+          <p className="text-muted-foreground">No posts yet.</p>
+        )}
+      </div>
+
       {/* Projects Section */}
-      <div className="space-y-4 sm:space-y-6">
-        {/* Updated h2: Smaller size, semibold */}
-        <h2 className="text-xl font-semibold tracking-tight">
-          Projects
-        </h2>
+      <div id="projects" className="space-y-4 sm:space-y-6">
+        <h2 className="text-xl font-semibold tracking-tight">Projects</h2>
         {/* Optional: Removed the sub-description paragraph for closer match */}
         {/* <p className="text-muted-foreground">
           A selection of things I&apos;ve built or contributed to.
         </p> */}
         
-        <ProjectList projects={allProjects} /> {/* Pass all projects to the client component */}
+        <ProjectList projects={allProjects} />
       </div>
-
-      {/* Other sections (Speaking, Blog summaries?) can be added later */}
     </section>
   );
 }
