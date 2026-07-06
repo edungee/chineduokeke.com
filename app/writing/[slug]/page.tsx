@@ -3,21 +3,21 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { format, parseISO } from 'date-fns'
 import { ArrowBendUpLeft } from '@phosphor-icons/react/dist/ssr'
-import { getBlogPostData, getAllBlogSlugs } from '@/lib/blogs'
+import { getWritingPostData, getAllWritingSlugs } from '@/lib/writing'
 import { MarkdownRenderer } from '@/components/MarkdownRenderer'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const slugs = getAllBlogSlugs()
+  const slugs = getAllWritingSlugs()
   return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
-    const post = await getBlogPostData(params.slug)
+    const post = await getWritingPostData(params.slug)
     return {
-      title: `${post.title} — Blog`,
+      title: `${post.title} — Writing`,
       description: post.description,
     }
   } catch {
@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function WritingPostPage({ params }: { params: { slug: string } }) {
   let post
   try {
-    post = await getBlogPostData(params.slug)
+    post = await getWritingPostData(params.slug)
   } catch {
     notFound()
   }
@@ -36,13 +36,13 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   return (
     <div className="max-w-2xl mx-auto py-8 px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
       <Link
-        href="/blogs"
+        href="/writing"
         className={cn(
           'inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors'
         )}
       >
         <ArrowBendUpLeft size={18} />
-        Blog
+        Writing
       </Link>
 
       <article>

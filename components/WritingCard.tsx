@@ -4,7 +4,7 @@ import { format, parseISO } from 'date-fns'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 
-interface BlogCardProps {
+interface WritingCardProps {
   slug: string
   title: string
   description: string
@@ -12,12 +12,12 @@ interface BlogCardProps {
   tags?: string[]
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ slug, title, description, date, tags }) => {
+const WritingCard: React.FC<WritingCardProps> = ({ slug, title, description, date, tags }) => {
   const hasTags = tags && tags.length > 0
 
   return (
     <div className="flex flex-col">
-      <Link href={`/blogs/${slug}`} className="group">
+      <Link href={`/writing/${slug}`} className="group">
         <h3
           className={cn(
             'text-base font-semibold group-hover:underline underline-offset-4 decoration-from-font',
@@ -50,4 +50,4 @@ const BlogCard: React.FC<BlogCardProps> = ({ slug, title, description, date, tag
   )
 }
 
-export default BlogCard
+export default WritingCard
