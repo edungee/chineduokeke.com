@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { getSortedProjectsData } from '@/lib/projects';
-import { getSortedBlogPostsData } from '@/lib/blogs';
+import { getSortedWritingPostsData } from '@/lib/writing';
 import { ProjectList } from '@/components/ProjectList';
-import BlogCard from '@/components/BlogCard';
+import WritingCard from '@/components/WritingCard';
 // Import Phosphor Icons
 import {
   TwitterLogo,
@@ -15,7 +15,7 @@ import {
 // The main page remains a Server Component
 export default async function HomePage() {
   const allProjects = getSortedProjectsData();
-  const allPosts = getSortedBlogPostsData();
+  const allPosts = getSortedWritingPostsData();
   const topPosts = allPosts.slice(0, 3);
 
   return (
@@ -57,13 +57,13 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Blog Section */}
-      <div id="blog" className="space-y-4 sm:space-y-6">
-        <h2 className="text-xl font-semibold tracking-tight">Blog</h2>
+      {/* Writing Section */}
+      <div id="writing" className="space-y-4 sm:space-y-6">
+        <h2 className="text-xl font-semibold tracking-tight">Writing</h2>
         {topPosts.length > 0 ? (
           <div className="flex flex-col space-y-6">
             {topPosts.map((post) => (
-              <BlogCard
+              <WritingCard
                 key={post.slug}
                 slug={post.slug}
                 title={post.title}
@@ -75,7 +75,7 @@ export default async function HomePage() {
             {allPosts.length > 3 && (
               <div className="flex justify-end pt-2">
                 <Link
-                  href="/blogs"
+                  href="/writing"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
                 >
                   View more

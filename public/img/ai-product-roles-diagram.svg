@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 772" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah-steel" markerWidth="9" markerHeight="9" refX="6.5" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#1F3A4D"/></marker>
+    <marker id="ah-amber" markerWidth="9" markerHeight="9" refX="6.5" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#B4802A"/></marker>
+    <marker id="ah-teal" markerWidth="10" markerHeight="10" refX="6.8" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" fill="#0F766E"/></marker>
+    <marker id="ah-slate" markerWidth="9" markerHeight="9" refX="6.5" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#7A8791"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="772" fill="#F5F4F0"/>
+
+  <!-- eyebrow -->
+  <text x="40" y="34" font-size="12" font-weight="700" letter-spacing="2" fill="#0F766E">ROLES, NOT LAYERS</text>
+  <text x="680" y="34" text-anchor="end" font-size="12" fill="#8A939B" letter-spacing="0.5">the orchestration loop</text>
+
+  <!-- PRESENTATION -->
+  <rect x="40" y="54" width="640" height="60" rx="10" fill="#EDEBE4" stroke="#7A8791" stroke-width="1.5"/>
+  <text x="58" y="82" font-size="14" font-weight="700" letter-spacing="1" fill="#22303A">PRESENTATION</text>
+  <text x="58" y="101" font-size="11" fill="#6B7280">how intent goes in  ·  how results come back</text>
+
+  <!-- REASONING -->
+  <rect x="205" y="300" width="310" height="118" rx="16" fill="#F6ECD6" stroke="#B4802A" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="360" y="338" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1" fill="#7A5A16">REASONING</text>
+  <text x="360" y="360" text-anchor="middle" font-size="11" fill="#8A6B23">interpretation · planning · orchestration</text>
+  <rect x="298" y="378" width="124" height="22" rx="11" fill="#FBF7EC" stroke="#B4802A" stroke-width="1"/>
+  <text x="360" y="393" text-anchor="middle" font-size="11" fill="#8A6B23" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">non-deterministic</text>
+
+  <!-- GROUND TRUTH -->
+  <rect x="150" y="536" width="420" height="122" rx="12" fill="#F0F2F3" stroke="#1F3A4D" stroke-width="1.5"/>
+  <text x="170" y="563" font-size="14" font-weight="700" letter-spacing="1" fill="#1F3A4D">GROUND TRUTH</text>
+  <text x="170" y="582" font-size="10.5" fill="#4A6472" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">deterministic — same input, same output</text>
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#FFFFFF">
+    <rect x="168" y="600" width="120" height="40" rx="8" fill="#1F3A4D"/><text x="228" y="624" text-anchor="middle">calc engine</text>
+    <rect x="300" y="600" width="120" height="40" rx="8" fill="#1F3A4D"/><text x="360" y="624" text-anchor="middle">business rules</text>
+    <rect x="432" y="600" width="120" height="40" rx="8" fill="#1F3A4D"/><text x="492" y="624" text-anchor="middle">validated data</text>
+  </g>
+
+  <!-- (1) intent contract: presentation -> reasoning -->
+  <path d="M170,114 C 170,182 232,232 300,300" fill="none" stroke="#7A8791" stroke-width="1.5" marker-end="url(#ah-slate)"/>
+  <rect x="196" y="200" width="9" height="9" fill="#F5F4F0" stroke="#7A8791" stroke-width="1.2" transform="rotate(45 200.5 204.5)"/>
+  <text x="70" y="205" font-size="11" fill="#4A5560" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">intent contract</text>
+
+  <!-- (2) execution contract: reasoning -> ground truth (HIGHLIGHT) -->
+  <path d="M345,418 L345,536" fill="none" stroke="#0F766E" stroke-width="3" marker-end="url(#ah-teal)"/>
+  <rect x="300" y="464" width="90" height="26" rx="13" fill="#0F766E"/>
+  <text x="345" y="481" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">execution</text>
+  <text x="345" y="507" text-anchor="middle" font-size="9.5" fill="#0F766E" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">validated · constrained · checked</text>
+
+  <!-- (3) grounding contract: ground truth -> reasoning -->
+  <path d="M415,536 L415,420" fill="none" stroke="#1F3A4D" stroke-width="2" marker-end="url(#ah-steel)"/>
+  <text x="430" y="478" font-size="10" fill="#4A5560" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">grounding</text>
+
+  <!-- loop annotation -->
+  <path d="M470,452 a10,10 0 1 1 -6,3" fill="none" stroke="#8A939B" stroke-width="1.4" marker-end="url(#ah-slate)"/>
+  <text x="492" y="450" font-size="11" font-weight="700" fill="#4A5560" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">loops</text>
+  <text x="470" y="484" font-size="10.5" fill="#6B7280" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">reason → call →</text>
+  <text x="470" y="500" font-size="10.5" fill="#6B7280" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">result → reason again</text>
+
+  <!-- (4a) explanation output: reasoning -> presentation (dashed / model-made) -->
+  <path d="M470,300 C 498,232 536,168 558,116" fill="none" stroke="#B4802A" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah-amber)"/>
+  <text x="512" y="212" font-size="10.5" fill="#8A6B23" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">explanation</text>
+  <text x="512" y="226" font-size="9.5" fill="#A98A4A" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">model-made, flexible</text>
+
+  <!-- (4b) guaranteed output: ground truth -> presentation, bypassing the model (solid) -->
+  <path d="M555,610 C 645,610 656,560 656,400 C 656,224 640,150 602,116" fill="none" stroke="#1F3A4D" stroke-width="2.5" marker-end="url(#ah-steel)"/>
+  <text x="674" y="150" text-anchor="end" font-size="11" font-weight="700" fill="#1F3A4D" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">guaranteed output</text>
+  <text x="674" y="165" text-anchor="end" font-size="9.5" fill="#4A6472" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">traced to ground truth</text>
+
+  <!-- legend -->
+  <line x1="60" y1="706" x2="98" y2="706" stroke="#1F3A4D" stroke-width="2.5" marker-end="url(#ah-steel)"/>
+  <text x="106" y="710" font-size="11" fill="#3A464E" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">deterministic / guaranteed</text>
+  <line x1="356" y1="706" x2="394" y2="706" stroke="#B4802A" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah-amber)"/>
+  <text x="402" y="710" font-size="11" fill="#3A464E" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">probabilistic / model-made</text>
+  <rect x="60" y="728" width="20" height="14" rx="4" fill="#0F766E"/>
+  <text x="88" y="739" font-size="11" fill="#3A464E" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">the seam where trust is won</text>
+
+  <!-- thesis -->
+  <text x="360" y="763" text-anchor="middle" font-size="12" fill="#4A5560" font-style="italic">Shrink how much of the promise passes through the model.</text>
+</svg>
