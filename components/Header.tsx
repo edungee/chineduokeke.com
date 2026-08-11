@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MobileNav } from "@/components/MobileNav";
+import { Logo } from "@/components/Logo";
 
 const Header = () => {
   return (
@@ -12,10 +13,16 @@ const Header = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center mx-auto px-4">
         {/* Left Side: Mobile Nav Trigger + Logo/Name */}
         <div className="flex items-center flex-1 md:flex-none">
-            <MobileNav /> 
-            {/* Optional: Add SVG logo here if desired */}
-            <Link href="/" className="ml-2 md:ml-0 flex items-center space-x-2">
-                {/* <span className="font-bold sm:inline-block text-lg">Chinedu Okeke</span> */}
+            <MobileNav />
+            <Link
+              href="/"
+              aria-label="Chinedu Okeke — home"
+              className="ml-2 md:ml-0 flex items-center transition-opacity hover:opacity-80"
+            >
+                {/* Mark only: the name was deliberately removed from the header
+                    in 8427528, and a wordmark here widens the left column
+                    enough to push the centred nav off-centre. */}
+                <Logo markOnly />
             </Link>
         </div>
 

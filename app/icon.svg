@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    Proportions follow the design's 64px favicon: a 34px mark on a 64px tile
+    with a 14px corner radius. Kept as a filled tile rather than a transparent
+    mark so it stays legible against any tab bar, and inverted under
+    prefers-color-scheme so it holds contrast in dark browser chrome too.
+  -->
+  <style>
+    .tile { fill: #ffffff; }
+    .ring { fill: none; stroke: #171717; stroke-width: 2.5; }
+    .disc { fill: #171717; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #171717; }
+      .ring { stroke: #fafafa; }
+      .disc { fill: #fafafa; }
+    }
+  </style>
+  <rect class="tile" width="64" height="64" rx="14" />
+  <circle class="ring" cx="26" cy="26" r="9.75" />
+  <circle class="disc" cx="38" cy="38" r="11" />
+</svg>

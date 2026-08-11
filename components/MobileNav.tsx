@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icons for menu button
 import { Button } from "@/components/ui/button";
+import { LogoMark } from "@/components/Logo";
 import {
   Sheet,
   SheetContent,
@@ -42,6 +43,7 @@ export function MobileNav() {
         <SheetHeader className="border-b pb-4 mb-4">
           <SheetTitle>
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
+               <LogoMark className="h-6 w-6 shrink-0 mr-2.5" />
                <span className="font-bold text-lg">Chinedu Okeke</span>
             </Link>
           </SheetTitle>
