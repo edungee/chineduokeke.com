@@ -15,6 +15,21 @@ repoUrl: "https://github.com/edungee/chineduokeke.com"
 liveUrl: "https://chineduokeke.com"
 videoEmbedUrl: "https://www.youtube.com/embed/G50FXKiT68U?si=BGYY9iwR2loPS8_K"
 designImages: []
+milestones:
+  - id: initial-portfolio-structure
+    date: '2025-05-04'
+    title: Added the initial portfolio structure
+    kind: Implementation
+    summary: Established the project structure and initial site components.
+    rationale: Create a maintainable home for projects and writing beyond a professional profile.
+    evidence: The repository records the project structure and initial components on 4 May 2025. This date reflects the code history, not a verified public launch.
+  - id: project-video-embed
+    date: '2025-05-12'
+    title: Added a project walkthrough video
+    kind: Implementation
+    summary: Included a YouTube embed on the personal website case study.
+    rationale: Let visitors see the project in action alongside its written description.
+    evidence: The repository records the video embed on 12 May and an updated video URL on 13 May 2025.
 ---
 
 
