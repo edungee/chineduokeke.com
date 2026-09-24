@@ -23,6 +23,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: "/", title: "Home" },
+  { href: "/projects", title: "Work & experiments" },
   { href: "/speaking", title: "Speaking" },
   { href: "https://www.youtube.com/@edunge", title: "YouTube", external: true }, // Replace link
   { href: "/writing", title: "Writing" },
@@ -84,4 +85,4 @@ export function MobileNav() {
       </SheetContent>
     </Sheet>
   );
-} 
+}

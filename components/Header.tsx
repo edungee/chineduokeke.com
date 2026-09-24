@@ -30,15 +30,17 @@ const Header = () => {
         <nav className="hidden flex-1 justify-center items-center space-x-3 text-sm font-medium md:flex">
           {/* Use text-light-accent2 / dark:text-dark-accent2 for link color */}
           <Link href="/" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Home</Link>
-          
+
           <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
-          
+
+          <Link href="/projects" className="transition-colors hover:text-foreground/80">Work & experiments</Link>
+          <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>
           <Link href="/speaking" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Speaking</Link>
-          
+
           <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
 
           <a href="https://www.youtube.com/@edunge" target="_blank" rel="noopener noreferrer" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">YouTube</a>
-          
+
           {/* <span className="h-4 w-px bg-border/50" aria-hidden="true"></span> */}{/* Separator */}
 
           <Link href="/writing" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Writing</Link>
@@ -53,4 +55,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

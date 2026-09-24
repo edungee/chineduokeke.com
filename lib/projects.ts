@@ -17,8 +17,26 @@ export interface ProjectFrontmatter {
   tldr: string;
   repoUrl?: string;
   liveUrl?: string;
+  liveLabel?: string;
+  videoUrl?: string;
   videoEmbedUrl?: string;
   designImages?: string[];// Allow other fields
+  stage?: string;
+  role?: string;
+  category?: string;
+  featuredOrder?: number;
+  workflow?: string[];
+  workflowCaption?: string;
+  format?: string;
+  milestones?: {
+    id: string;
+    date: string;
+    summary: string;
+    title: string;
+    kind: string;
+    rationale: string;
+    evidence?: string;
+  }[];
 }
 
 // Define the structure for a full project (frontmatter + content)
@@ -72,6 +90,8 @@ export function getSortedProjectsData(): ProjectFrontmatter[] {
 
   // Sort projects by date (newest first)
   return publishedProjects.sort((a, b) => {
+    const priority = (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99);
+    if (priority !== 0) return priority;
     if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
@@ -90,26 +110,26 @@ export async function getProjectData(slugParam: string): Promise<ProjectData> {
         throw new Error(`Project file not found for slug: ${slugParam}`)
     }
   }
-  
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
   const content = matterResult.content;
 
-  // --- Extract Headings --- 
+  // --- Extract Headings ---
   const headings: TocHeading[] = [];
   const tree = unified().use(remarkParse).parse(content);
-  
+
   visit(tree, 'heading', (node) => {
     // We only care about h2 and h3 for the ToC
-    if (node.depth === 2 || node.depth === 3) { 
+    if (node.depth === 2 || node.depth === 3) {
       // Extract text content from heading children
       let text = '';
       visit(node, 'text', (textNode) => {
         text += textNode.value;
       });
-      
+
       if (text) {
         headings.push({
           level: node.depth,
@@ -126,5 +146,5 @@ export async function getProjectData(slugParam: string): Promise<ProjectData> {
     content: content,
     headings: headings, // Include headings in the result
     ...(matterResult.data as Omit<ProjectFrontmatter, 'slug'>),
-  } as ProjectData; 
-} 
+  } as ProjectData;
+}
