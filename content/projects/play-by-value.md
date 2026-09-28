@@ -7,23 +7,58 @@ featuredOrder: 2
 category: Creative project
 stage: Building and producing
 role: Editorial direction and production workflow
-description: Exploring the money and decisions behind football through visual stories and a repeatable research workflow.
-tldr: A football-finance media project, and an experiment in connecting rigorous research with creative production.
-tools: [Notion, Codex, Claude, ElevenLabs, DaVinci Resolve]
-liveUrl: https://www.youtube.com/@playbyvalue
+description: >-
+  Exploring the money and decisions behind football through visual stories and a
+  repeatable research workflow.
+tldr: >-
+  A football-finance media project, and an experiment in connecting rigorous
+  research with creative production.
+tools:
+  - Notion
+  - Codex
+  - Claude
+  - ElevenLabs
+  - DaVinci Resolve
+liveUrl: 'https://www.youtube.com/@playbyvalue'
 liveLabel: Watch Play by Value
-videoUrl: https://youtu.be/1ZcX73hjkNs
-videoEmbedUrl: https://www.youtube.com/embed/1ZcX73hjkNs
+videoUrl: 'https://youtu.be/1ZcX73hjkNs'
+videoEmbedUrl: 'https://www.youtube.com/embed/1ZcX73hjkNs'
 milestones:
   - id: production-walkthrough-packaging
     date: '2026-09-21'
     title: Developed the production-system walkthrough
     kind: Creative development
-    summary: Prepared the framing and thumbnail for a behind-the-scenes look at the production workflow.
-    rationale: Explain how research, scripting, narration preparation and editing fit together, while making the human creative handoffs clear.
-    evidence: The production conversation records a walkthrough title, description and thumbnail created on 21 September. This milestone describes preparation, not a confirmed video publication or audience result.
-workflow: [Choose a question, Research and verify, Script and plan visuals, Narrate and edit]
-workflowCaption: 'Production workflow — creative decisions and final editing remain human-led.'
+    summary: >-
+      Prepared the framing and thumbnail for a behind-the-scenes look at the
+      production workflow.
+    rationale: >-
+      Explain how research, scripting, narration preparation and editing fit
+      together, while making the human creative handoffs clear.
+    evidence: >-
+      The production conversation records a walkthrough title, description and
+      thumbnail created on 21 September. This milestone describes preparation,
+      not a confirmed video publication or audience result.
+  - id: narrative-and-handoff-standard-v2
+    date: '2026-09-26'
+    kind: decision
+    title: Refined the storytelling and production handoff
+    summary: >-
+      Adopted a story-led structure with a worked example, a consistent visual
+      metaphor and clearer audio handoffs.
+    rationale: >-
+      Make complex football-business mechanisms easier to follow while keeping
+      the explanation tied to verified evidence.
+    evidence: >-
+      The production standard adopted on 26 September defines narrative stages
+      and separate narration, music and sound-effects handoffs. This records a
+      workflow decision, not a released episode or measured audience
+      improvement.
+workflow:
+  - Choose a question
+  - Research and verify
+  - Script and plan visuals
+  - Narrate and edit
+workflowCaption: Production workflow — creative decisions and final editing remain human-led.
 ---
 
 ## Why this exists

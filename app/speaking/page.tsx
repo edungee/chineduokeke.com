@@ -10,8 +10,8 @@ import {
 
 // Optional: Add metadata
 export const metadata = {
-  title: "Speaking Engagements",
-  description: "A list of conferences, meetups, webinars and mentorship sessions where Chinedu Okeke has spoken.",
+  title: "Speaking & conversations",
+  description: "Conversations on product and engineering decisions, alongside talks, meetups and mentorship sessions.",
 };
 
 export default async function SpeakingPage() {
@@ -31,13 +31,25 @@ export default async function SpeakingPage() {
       {/* Page Header */}
       <header className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Speaking Engagements
+          Speaking &amp; conversations
         </h1>
         <p className="text-base text-muted-foreground">
-          Here&apos;s a list of my speaking engagements at various meetups, webinars and mentorship sessions where I have given back to the product management community.
+          Exploring product and engineering decisions through conversation, alongside talks and sessions with the product management community.
         </p>
       </header>
 
+      <section aria-labelledby="ramblings-heading" className="space-y-4 rounded-xl border border-border bg-muted/30 p-6 sm:p-8">
+        <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Recurring series</p>
+        <h2 id="ramblings-heading" className="text-2xl font-semibold tracking-tight">Ramblings of B × C</h2>
+        <p className="text-base leading-relaxed text-muted-foreground">
+          Conversations with Bosun about product and engineering decisions, the trade-offs behind what we build, and where our perspectives meet or differ.
+        </p>
+        <a href="https://www.youtube.com/@ramblingsofbxc" target="_blank" rel="noopener noreferrer" className="inline-flex text-sm font-medium underline underline-offset-4 hover:text-muted-foreground transition-colors">
+          Watch Ramblings of B × C <span aria-hidden="true" className="ml-1">↗</span>
+        </a>
+      </section>
+
+      <h2 className="text-2xl font-semibold tracking-tight">Talks &amp; guest appearances</h2>
       {/* Engagements List */}
       <div className="space-y-12">
         {years.length > 0 ? (
