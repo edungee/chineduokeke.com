@@ -7,12 +7,34 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { JsonLd } from "@/components/JsonLd";
+import { siteConfig, personJsonLd, websiteJsonLd } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Chinedu Okeke - Product Manager",
-  description: "Showcasing projects, thoughts, and speaking engagements.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Chinedu Okeke — Product Manager, Platforms, Data & AI",
+    template: "%s | Chinedu Okeke",
+  },
+  description: siteConfig.description,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "/",
+    siteName: siteConfig.name,
+    title: "Chinedu Okeke — Product Manager, Platforms, Data & AI",
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: siteConfig.twitterHandle,
+    creator: siteConfig.twitterHandle,
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +53,8 @@ export default function RootLayout({
           inter.variable
         )}
       >
+        <JsonLd data={personJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

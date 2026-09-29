@@ -4,6 +4,7 @@ import { ProjectList } from '@/components/ProjectList';
 export const metadata = {
   title: 'Work & experiments',
   description: 'Products, creative projects and experiments by Chinedu Okeke.',
+  alternates: { canonical: '/projects' },
 };
 
 export default function ProjectsPage() {

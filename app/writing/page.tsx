@@ -5,7 +5,8 @@ import WritingCard from '@/components/WritingCard'
 
 export const metadata = {
   title: 'Writing',
-  description: 'Thoughts on product management, building in public, and lessons from shipping.',
+  description: 'Essays by Chinedu Okeke on product management, platform design and building trustworthy AI products.',
+  alternates: { canonical: '/writing' },
 }
 
 export default async function WritingPage() {
