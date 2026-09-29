@@ -12,6 +12,7 @@ import {
 export const metadata = {
   title: "Speaking & conversations",
   description: "Conversations on product and engineering decisions, alongside talks, meetups and mentorship sessions.",
+  alternates: { canonical: '/speaking' },
 };
 
 export default async function SpeakingPage() {

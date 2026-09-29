@@ -7,6 +7,8 @@ import { getWritingPostData, getAllWritingSlugs } from '@/lib/writing'
 import { MarkdownRenderer } from '@/components/MarkdownRenderer'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import { JsonLd } from '@/components/JsonLd'
+import { siteConfig, absoluteUrl, personId } from '@/lib/site'
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const slugs = getAllWritingSlugs()
@@ -16,9 +18,23 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
     const post = await getWritingPostData(params.slug)
+    const path = `/writing/${params.slug}`
     return {
-      title: `${post.title} — Writing`,
+      title: post.title,
       description: post.description,
+      keywords: post.tags,
+      alternates: { canonical: path },
+      robots: post.published === false ? { index: false, follow: false } : undefined,
+      openGraph: {
+        type: 'article',
+        url: path,
+        title: post.title,
+        description: post.description,
+        publishedTime: post.date,
+        authors: [siteConfig.url],
+        tags: post.tags,
+      },
+      twitter: { card: 'summary_large_image', title: post.title, description: post.description },
     }
   } catch {
     return { title: 'Post not found', description: 'The requested post could not be found.' }
@@ -45,6 +61,20 @@ export default async function WritingPostPage({ params }: { params: { slug: stri
         Writing
       </Link>
 
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          url: absoluteUrl(`/writing/${post.slug}`),
+          mainEntityOfPage: absoluteUrl(`/writing/${post.slug}`),
+          keywords: post.tags?.join(', '),
+          author: { '@type': 'Person', '@id': personId, name: siteConfig.name, url: siteConfig.url },
+          publisher: { '@id': personId },
+        }}
+      />
       <article>
         <header className="mb-4">
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3">{post.title}</h1>
