@@ -2,6 +2,7 @@
 title: "Personal Website V1"
 slug: "personal-website-v1"
 published: true
+featuredOrder: 6
 date: "2024-01-10"
 description: "The first iteration of my personal online presence built with Next.js and Tailwind, completely vibe-coded with Cursor."
 tools: 

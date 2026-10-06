@@ -3,7 +3,7 @@ title: Portfolio Editor
 slug: portfolio-editor
 published: true
 date: '2026-10-06'
-featuredOrder: 6
+featuredOrder: 3
 category: Experiment
 stage: Open-source skill — personal pilot running
 role: Product definition, workflow design and implementation
@@ -64,7 +64,7 @@ The skill does not supply account access or scheduling by itself. Those capabili
 
 The 5 October personal-pilot run completed the path from fresh evidence to a draft PR and verified preview. It also exposed a practical limit: a bounded review can produce supported proposals while historical source coverage remains incomplete. Queues and honest coverage reports are part of the product, not evidence that every source was reviewed.
 
-The public skill is available under Apache 2.0. The Codex installation target and synthetic demo have been tested; full first-use walkthroughs on other hosts still need validation. A functioning personal pilot does not establish independent-user adoption, time savings or reliable unattended operation across platforms.
+The public skill is available under Apache 2.0. The Codex installation target and synthetic demo have been tested. I also tested the skill successfully in Claude Code, as shown in the walkthrough above. This verifies that demonstrated workflow; other host setups and capabilities still need their own validation. A functioning personal pilot does not establish independent-user adoption, time savings or reliable unattended operation across platforms.
 
 ## What’s next
 
