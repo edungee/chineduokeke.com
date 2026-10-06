@@ -12,6 +12,8 @@ description: An evidence-backed workflow that turns ongoing work into portfolio 
 tldr: Keeping a portfolio current without turning every task into an achievement or publishing private work by default.
 tools: []
 repoUrl: https://github.com/edungee/portfolio-editor
+videoUrl: https://www.youtube.com/watch?v=iPAz8Cr8MtU
+videoEmbedUrl: https://www.youtube.com/embed/iPAz8Cr8MtU
 liveUrl: https://www.skills.sh/edungee/portfolio-editor/portfolio-editor
 liveLabel: View skill on skills.sh
 milestones:
