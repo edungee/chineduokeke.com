@@ -3,7 +3,7 @@ title: Brand Launch Agent
 slug: brand-launch-agent
 published: true
 date: '2026-09-24'
-featuredOrder: 3
+featuredOrder: 4
 category: Experiment
 stage: Internal workflow trial
 role: Workflow design and internal evaluation

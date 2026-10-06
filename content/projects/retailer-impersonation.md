@@ -3,7 +3,7 @@ title: When a store gets cloned
 slug: retailer-impersonation
 published: true
 date: '2026-09-24'
-featuredOrder: 4
+featuredOrder: 5
 category: Discovery
 stage: MVP defined — validation pending
 role: Research, product definition and MVP planning
