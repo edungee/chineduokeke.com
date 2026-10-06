@@ -53,6 +53,21 @@ milestones:
       and separate narration, music and sound-effects handoffs. This records a
       workflow decision, not a released episode or measured audience
       improvement.
+  - id: drawn-page-trial
+    date: '2026-10-03'
+    kind: decision
+    title: Started a drawing-led explanation trial
+    summary: >-
+      Trialling evolving drawings to explain football-finance mechanisms, with
+      narration and visual plans developed together.
+    rationale: >-
+      Test whether changing a simple drawn object makes a financial mechanism
+      easier to understand, while keeping spoken narration clear on its own.
+    evidence: >-
+      The 3 October workflow amendment separates spoken narration from drawing
+      directions and calls for distinct landscape and portrait compositions. The
+      style remains a trial pending a complete episode assessment; no audience
+      or retention result is claimed.
 workflow:
   - Choose a question
   - Research and verify

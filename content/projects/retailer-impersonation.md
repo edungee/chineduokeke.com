@@ -5,10 +5,10 @@ published: true
 date: '2026-09-24'
 featuredOrder: 4
 category: Discovery
-stage: Pre-validation — manual pilot proposed
-role: Research, product definition and pilot design
-description: Investigating whether better evidence and coordinated complaints can help small retailers respond to impersonation.
-tldr: Testing an incident-response approach before deciding whether to build software around it.
+stage: MVP defined — validation pending
+role: Research, product definition and MVP planning
+description: Exploring a detection-first workflow that helps small retailers review suspected store copies and approve evidence-backed complaints.
+tldr: Developing a detection, review and takedown workflow, with validation gates before broader rollout.
 tools: []
 milestones:
   - id: manual-validation-proposal
@@ -18,45 +18,42 @@ milestones:
     summary: Proposed five to ten authorised cases to test whether better evidence improves incident response.
     rationale: Test effectiveness, effort and willingness to pay before automating the workflow. Define stop criteria and owner approval requirements at the outset.
     evidence: The draft v0.1 PRD is dated 23 September and explicitly marked pre-validation. The cases, takedown outcomes and commercial assumptions remain untested.
-workflow: [Confirm the owner and originals, Gather dated evidence, Prepare route-specific complaints, Owner approves and outcomes are tracked]
-workflowCaption: 'Proposed manual pilot — no takedown outcomes have been established.'
+  - id: detection-first-mvp-plan
+    date: '2026-10-01'
+    title: Defined a detection-first MVP
+    kind: Product definition
+    summary: Expanded the initial manual-pilot proposal into a staged plan for detection, operator review, customer reports and owner-approved complaints.
+    rationale: Test whether finding and explaining suspected copies creates a useful starting point before scaling takedown workflows or monitoring.
+    evidence: The October plan separates setup, detection and reporting, outbound validation, self-service and monitoring. Stage gates are targets to test, not achieved customer or enforcement outcomes.
+workflow: [Find suspected copies, Operator reviews evidence, Owner reviews the report, Owner approves complaints and outcomes are tracked]
+workflowCaption: 'Staged MVP plan — validation gates and takedown outcomes remain unproven.'
 ---
 
 ## Why this exists
 
-The research brief examines small retailers who discover a store impersonating them and struggle to get an effective response. The working hypothesis is that preparing evidence and navigating reporting routes may be a more useful starting point than another detection tool.
-
-The intended user is a small retailer dealing with a live incident and limited time to coordinate a response.
+Small retailers who find copies of their stores can struggle to assemble evidence and coordinate an effective response. The original September proposal began with a manual incident-response pilot. The October plan broadens the starting point to finding suspected copies, reviewing evidence and producing a report before preparing complaints.
 
 ## What I’m testing
 
-Before building software, the proposed pilot is to help with five to ten authorised cases manually. It would record what the owner has already tried, prepare evidence and complaints, and track the response on each route.
-
-The central question is whether this approach helps stop a clone taking money faster than the owner’s existing attempts. That remains unproven.
+The current direction is a detection-first MVP with operator review. The hypothesis is that a useful report can help an owner decide whether to pursue a takedown. Effectiveness, operating effort and willingness to pay remain unproven.
 
 ## Key decisions
 
-- **Validate manually first.** Learn whether the intervention works before automating it.
-- **Measure the practical outcome.** Track interruption of the fraudulent operation, alongside time, effort and response by route.
-- **Treat false complaints as a product risk.** Identity checks, legitimate-seller exclusions and owner approval belong in the design from the start.
+- **Review evidence before presenting an accusation.** Candidate scores order the operator’s queue; they do not decide what the customer sees.
+- **Keep owner approval in the workflow.** The owner approves each complaint before it is sent.
+- **Use staged validation.** Detection and reporting are followed by outbound and self-service experiments; monitoring comes later.
 
 ## How it would work
 
-An owner reports the suspected clone and confirms their original materials. Dated evidence supports a comparison and proposed complaints. Unclear matches are escalated for review. The owner approves each complaint, and the response is tracked separately for each route.
-
-The proposed agent would assist with preparation. It would not independently decide to accuse a business or submit complaints.
+The workflow finds suspected copies and collects comparison evidence. An operator reviews candidates before a customer report is released. The owner reviews the evidence and approves proposed complaints; responses and outcomes are tracked separately.
 
 ## Evidence and learning
 
-The current artifact is a research-led product brief, not a working enforcement service. Public incident accounts informed the problem framing, but the effectiveness of this approach, the effort required and willingness to pay are still hypotheses.
-
-The proposed pilot must also test whether the reporting routes and evidence requirements work in practice. Removal cannot be assumed or guaranteed.
+A current MVP plan defines detection, triage, reporting and takedown workflows. Engineering progress is being tracked, but this case study does not yet establish a complete working service, public launch or successful enforcement outcomes. The earlier manual-pilot proposal remains in the project history as the starting point.
 
 ## What’s next
 
-Validate the pilot approach and recruit authorised participants. Record the owner’s previous attempts, preparation time, approval effort and outcomes over a defined observation period.
-
-The proposal calls for stopping or rethinking if there is no clear speed advantage, fewer than half of cases stop taking money within fourteen days, effort stays above six hours per case without a way to reduce it, or fewer than three owners say they would pay. These are proposed decision criteria, not achieved results.
+Validate detection quality, operator effort and the usefulness of the report before scaling the service. Test willingness to pay and owner-approved case handling, then use the results to decide whether to expand into self-service and monitoring. The plan’s stage gates remain proposed decision criteria.
 
 ## Related writing
 
