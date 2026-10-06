@@ -37,6 +37,13 @@ milestones:
     summary: Added structured metadata, a sitemap, canonical URLs and generated social preview cards for the site, writing and projects.
     rationale: Make published content easier for crawlers to interpret and give shared links a consistent visual preview.
     evidence: The changes were merged into the website repository on 29 September 2026. This records implementation; no improvement in rankings, traffic or engagement has been measured.
+  - id: evidence-backed-portfolio-review
+    date: '2026-10-05'
+    title: Added a scheduled portfolio review workflow
+    kind: Implementation
+    summary: Connected ongoing work evidence to proposed website updates, a combined preview and a draft PR for review.
+    rationale: Keep the website current while checking claims and retaining control over what becomes public.
+    evidence: The personal pilot completed a scheduled run on 5 October, producing a draft PR and verified preview. Source backfill remained partial; the workflow does not automatically merge or publish changes.
 ---
 
 
@@ -48,3 +55,10 @@ This project aimed to create a simple, fast, and easily maintainable personal we
 The site now includes project histories alongside writing and speaking. Search and sharing foundations include structured metadata, a generated sitemap, canonical URLs and social preview cards drawn from page content. These are implemented capabilities; their effect on discovery and engagement remains unmeasured.
 
 The project history records substantial site improvements as they are made. Proposed updates remain subject to PR review before publication.
+
+
+## Keeping the portfolio current
+
+[Portfolio Editor](/projects/portfolio-editor) prepares evidence-backed updates from approved work sources. Its weekly personal pilot compares new developments with existing content and produces a private review, public-safe draft changes and a verified preview. I review the PR before publication.
+
+The workflow tracks incomplete reads and deferred claims explicitly. It is intended to make editorial review easier, not to turn every completed task into a public achievement.
