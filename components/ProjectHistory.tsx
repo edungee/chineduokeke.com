@@ -32,7 +32,11 @@ export function ProjectHistory({ milestones }: { milestones: NonNullable<Project
           </summary>
           <div className="mt-5 space-y-4 border-l pl-4 text-sm leading-relaxed">
             <div><h3 className="font-medium">Why this changed</h3><p className="mt-1 text-muted-foreground">{m.rationale}</p></div>
-            {m.evidence && <div><h3 className="font-medium">Evidence & context</h3><p className="mt-1 text-muted-foreground">{m.evidence}</p></div>}
+            {(m.evidence || (m.evidenceUrl && /^https?:\/\//i.test(m.evidenceUrl))) && <div>
+              <h3 className="font-medium">Evidence & context</h3>
+              {m.evidence && <p className="mt-1 text-muted-foreground">{m.evidence}</p>}
+              {m.evidenceUrl && /^https?:\/\//i.test(m.evidenceUrl) && <a href={m.evidenceUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline underline-offset-4">{m.evidenceLabel || 'View supporting evidence'}</a>}
+            </div>}
             <a href={`#${m.id}`} className="inline-block underline underline-offset-4" aria-label={`Permanent link to ${m.title}`}>Link to this milestone</a>
           </div>
         </details>)}
