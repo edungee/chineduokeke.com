@@ -36,6 +36,7 @@ export interface ProjectFrontmatter {
     kind: string;
     rationale: string;
     evidence?: string;
+    evidenceUrl?: string;
   }[];
 }
 
