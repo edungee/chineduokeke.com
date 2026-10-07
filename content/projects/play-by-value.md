@@ -69,7 +69,6 @@ milestones:
       style remains a trial pending a complete episode assessment; no audience
       or retention result is claimed.
     evidenceUrl: https://www.youtube.com/watch?v=TMCa-Z7BZoI
-    evidenceLabel: 'Watch the drawing-led trial: Man City’s 115 Charges'
 workflow:
   - Choose a question
   - Research and verify

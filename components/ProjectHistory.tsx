@@ -23,7 +23,9 @@ export function ProjectHistory({ milestones }: { milestones: NonNullable<Project
     {years.map(year => <section key={year} aria-labelledby={`year-${year}`}>
       <h2 id={`year-${year}`} className="mb-4 font-mono text-sm text-muted-foreground">{year}</h2>
       <div className="border-t">
-        {milestones.filter(m => m.date.startsWith(year)).map(m => <details key={m.id} id={m.id} className="group scroll-mt-24 border-b py-5">
+        {milestones.filter(m => m.date.startsWith(year)).map(m => {
+          const evidenceUrl = m.evidenceUrl && /^https?:\/\//i.test(m.evidenceUrl) ? m.evidenceUrl : undefined;
+          return <details key={m.id} id={m.id} className="group scroll-mt-24 border-b py-5">
           <summary className="cursor-pointer rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
             <span className="ml-1 text-xs text-muted-foreground"><time dateTime={m.date}>{format(parseISO(m.date), 'd MMM yyyy')}</time> · {m.kind}</span>
             <span className="mt-2 block text-base font-semibold">{m.title}</span>
@@ -32,14 +34,11 @@ export function ProjectHistory({ milestones }: { milestones: NonNullable<Project
           </summary>
           <div className="mt-5 space-y-4 border-l pl-4 text-sm leading-relaxed">
             <div><h3 className="font-medium">Why this changed</h3><p className="mt-1 text-muted-foreground">{m.rationale}</p></div>
-            {(m.evidence || (m.evidenceUrl && /^https?:\/\//i.test(m.evidenceUrl))) && <div>
-              <h3 className="font-medium">Evidence & context</h3>
-              {m.evidence && <p className="mt-1 text-muted-foreground">{m.evidence}</p>}
-              {m.evidenceUrl && /^https?:\/\//i.test(m.evidenceUrl) && <a href={m.evidenceUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline underline-offset-4">{m.evidenceLabel || 'View supporting evidence'}</a>}
-            </div>}
-            <a href={`#${m.id}`} className="inline-block underline underline-offset-4" aria-label={`Permanent link to ${m.title}`}>Link to this milestone</a>
+            {m.evidence && <div><h3 className="font-medium">Evidence & context</h3><p className="mt-1 text-muted-foreground">{m.evidence}</p></div>}
+            <a href={evidenceUrl || `#${m.id}`} target={evidenceUrl ? '_blank' : undefined} rel={evidenceUrl ? 'noopener noreferrer' : undefined} className="inline-block underline underline-offset-4" aria-label={evidenceUrl ? `Link to this milestone: ${m.title}` : `Permanent link to ${m.title}`}>Link to this milestone</a>
           </div>
-        </details>)}
+        </details>;
+        })}
       </div>
     </section>)}
   </div>;
