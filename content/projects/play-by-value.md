@@ -68,6 +68,7 @@ milestones:
       directions and calls for distinct landscape and portrait compositions. The
       style remains a trial pending a complete episode assessment; no audience
       or retention result is claimed.
+    evidenceUrl: https://www.youtube.com/watch?v=TMCa-Z7BZoI
 workflow:
   - Choose a question
   - Research and verify
