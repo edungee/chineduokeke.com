@@ -46,16 +46,16 @@ milestones:
     kind: implementation
     title: Used the workflow in a real naming exercise
     summary: >-
-      Carried a retailer-protection concept through an approved brief, candidate
-      comparison and a visual-design handoff.
+      Carried CloneBrake through an approved brief, name comparison, availability
+      checks and a visual-design handoff.
     rationale: >-
       Test whether the brief preserves context through naming and design while
       making unresolved checks visible.
     evidence: >-
-      The internal trial records naming decisions and a design brief.
-      Social-handle claiming and trademark clearance remain unresolved, and the
-      logo is still being explored. This is an internal workflow trial, not a
-      launched service or independent-user validation.
+      Domain and social-name collisions ruled out shortlisted alternatives.
+      CloneBrake was selected and the owner confirmed buying its .com domain.
+      Social-handle ownership and trademark clearance were not established by
+      those checks. This was an internal trial, not independent-user validation.
 workflow:
   - Approve the brand brief
   - Explore name candidates
@@ -90,7 +90,9 @@ The intended output includes the approved brief, candidate rationales, validatio
 
 ## Evidence and learning
 
-The first internal use produced a naming decision and design brief. It also exposed unfinished steps: social handles were not claimed, trademark clearance remained unresolved and the logo needed further exploration. This is evidence of an exercised workflow, not proof of reliable platform checks or usefulness to independent users.
+The CloneBrake exercise shows how the checks affected a decision. Cloneward was rejected after exact social-name conflicts; Impostra had a registered .com and occupied handles, including an adjacent fraud-content channel. CloneBrake survived the initial checks and I confirmed purchasing its .com domain.
+
+The checks also preserved uncertainty: no visible account did not mean a handle could definitely be registered, Facebook could not be checked reliably, and trademark research was incomplete. This is evidence of an exercised comparison and selection workflow, not blanket name clearance or validation with independent users.
 
 The shift from an initial web-app proposal to a skill-first approach is itself a useful scope decision: the first question is whether the workflow helps someone make a better decision.
 
@@ -100,4 +102,4 @@ Test the validation methods and finish the unresolved checks. Then observe wheth
 
 ## Related project
 
-[Play by Value](/projects/play-by-value) provided the practical naming and production context behind this experiment.
+[Play by Value](/projects/play-by-value) provided the initial naming context. [CloneBrake](/projects/retailer-impersonation) became a concrete internal trial, connecting the brief, candidate checks, selected name and design handoff.
