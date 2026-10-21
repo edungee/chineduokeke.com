@@ -1,6 +1,14 @@
 {
-  "name": "dremio",
+  "name": "chineduokeke-com",
   "version": "0.1.0",
+  "description": "Source for chineduokeke.com, the personal site of Chinedu Okeke.",
+  "license": "MIT",
+  "author": "Chinedu Okeke (https://www.chineduokeke.com)",
+  "homepage": "https://www.chineduokeke.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edungee/chineduokeke.com.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
