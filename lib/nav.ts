@@ -8,8 +8,6 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { href: '/', title: 'Home' },
   { href: '/projects', title: 'Work & experiments' },
-  { href: '/speaking', title: 'Speaking' },
-  { href: '/podcast', title: 'Podcast' },
-  { href: 'https://www.youtube.com/@edunge', title: 'YouTube', external: true },
   { href: '/writing', title: 'Writing' },
+  { href: '/conversations', title: 'Podcast & talks' },
 ]

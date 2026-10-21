@@ -12,7 +12,7 @@ It holds my writing, projects and experiments (with a decision history for each)
 | Writing | `/writing`, `/writing/[slug]` | `content/writing/*.md` |
 | Work & experiments | `/projects`, `/projects/[slug]` | `content/projects/*.md` |
 | Project history | `/projects/[slug]/history` | `milestones` in each project's frontmatter |
-| Speaking | `/speaking` | `content/speaking/*.md` |
+| Podcast & talks | `/conversations` | `content/speaking/*.md`, plus the latest podcast episodes |
 | Podcast | `/podcast`, `/podcast/[slug]` | `content/podcast/*.md` |
 
 ## Stack
@@ -62,7 +62,7 @@ youtubeId: "1pIKK2XiiBs" # optional: the part after watch?v=, embeds the video
 
 The newest episode with a `youtubeId` is embedded on `/podcast`. Show-level links (YouTube, Spotify, Apple) live in `lib/podcast.ts`.
 
-**Speaking:** `content/speaking/<slug>.md` with `date`, `event`, `location`, `title` and optionally `eventLink` and `talkLink`.
+**Talks:** `content/speaking/<slug>.md` with `date`, `event`, `location`, `title` and optionally `eventLink` and `talkLink`.
 
 Set `published: false` on any entry to hide it.
 

@@ -12,12 +12,12 @@ import { getEpisodes, podcast } from '@/lib/podcast';
 
 // Optional: Add metadata
 export const metadata = {
-  title: "Speaking & conversations",
-  description: "Conversations on product and engineering decisions, alongside talks, meetups and mentorship sessions.",
-  alternates: { canonical: '/speaking' },
+  title: "Podcast & talks",
+  description: "Ramblings of B × C, a product and engineering podcast with Chinedu Okeke and Bosun, plus talks, meetups and mentorship sessions.",
+  alternates: { canonical: '/conversations' },
 };
 
-export default async function SpeakingPage() {
+export default async function ConversationsPage() {
   const allEngagements = getSortedSpeakingEngagements();
   const latestEpisodes = getEpisodes().slice(0, 3);
   const groupedEngagements = groupEngagementsByYear(allEngagements);
@@ -35,7 +35,7 @@ export default async function SpeakingPage() {
       {/* Page Header */}
       <header className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Speaking &amp; conversations
+          Podcast &amp; talks
         </h1>
         <p className="text-base text-muted-foreground">
           Exploring product and engineering decisions through conversation, alongside talks and sessions with the product management community.
