@@ -86,6 +86,10 @@ Most project updates are drafted by [Portfolio Editor](https://github.com/edunge
 4. Change colours in `tailwind.config.ts` and `app/globals.css`.
 5. Deploy to Vercel, then submit `https://<your-domain>/sitemap.xml` in Google Search Console.
 
+## License
+
+[MIT](LICENSE). Use the code freely, but please don't republish my writing or project write-ups as your own.
+
 ## Contact
 
 [Website](https://www.chineduokeke.com) · [LinkedIn](https://www.linkedin.com/in/chinedu-okeke/) · [X](https://x.com/edunge) · [GitHub](https://github.com/edungee)
