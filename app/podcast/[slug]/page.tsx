@@ -7,6 +7,7 @@ import { MarkdownRenderer } from '@/components/MarkdownRenderer'
 import { Badge } from '@/components/ui/badge'
 import { episodeJsonLd, getEpisode, getEpisodes, listenLinks, podcast } from '@/lib/podcast'
 import { ListenLinks } from '@/components/ListenLinks'
+import { YouTubeEmbed } from '@/components/YouTubeEmbed'
 
 export function generateStaticParams() {
   return getEpisodes().map((e) => ({ slug: e.slug }))
@@ -60,6 +61,8 @@ export default function EpisodePage({ params }: { params: { slug: string } }) {
           )}
           <ListenLinks links={listenLinks(e)} />
         </header>
+
+        {e.youtubeId && <YouTubeEmbed id={e.youtubeId} title={`${podcast.name}: ${e.title}`} />}
 
         <section>
           <MarkdownRenderer>{e.content}</MarkdownRenderer>

@@ -6,7 +6,6 @@ date: "2026-09-27"
 duration: 32
 description: "Bosun and Chinedu Okeke test the claim that technical debt is a product decision: when to prioritise it over features, how to make the business case, and what AI coding agents change."
 tags: ["Technical debt", "Prioritisation", "Engineering", "AI coding agents"]
-iheart: "https://www.iheart.com/podcast/1333-ramblings-of-b-x-c-343015579/episode/ep-03-technical-debt-is-346372875/"
 ---
 
 "Technical debt is a product decision." We take that statement and pull it apart from both sides.

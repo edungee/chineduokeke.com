@@ -6,7 +6,6 @@ date: "2026-09-12"
 duration: 29
 description: "Bosun and Chinedu Okeke on whether engineers should talk directly to customers: what gets lost in translation, the cost to focus time, and a practical middle ground."
 tags: ["Product management", "Engineering", "Customer discovery"]
-iheart: "https://www.iheart.com/podcast/1333-ramblings-of-b-x-c-343015579/episode/ep-02-should-engineers-talk-343960580/"
 ---
 
 Should engineers hear from customers first-hand, or should the product team sit between them and translate?

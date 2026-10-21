@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
 import { JsonLd } from '@/components/JsonLd'
-import { getEpisodes, podcast, seriesJsonLd } from '@/lib/podcast'
+import { getEpisodes, getLatestVideoEpisode, podcast, seriesJsonLd } from '@/lib/podcast'
+import { YouTubeEmbed } from '@/components/YouTubeEmbed'
 import { ListenLinks } from '@/components/ListenLinks'
 
 export const metadata = {
@@ -13,6 +14,7 @@ export const metadata = {
 
 export default function PodcastPage() {
   const episodes = getEpisodes()
+  const latest = getLatestVideoEpisode()
 
   return (
     <section className="max-w-2xl mx-auto space-y-10 md:space-y-12">
@@ -27,6 +29,18 @@ export default function PodcastPage() {
         </p>
         <ListenLinks />
       </header>
+
+      {latest?.youtubeId && (
+        <section aria-labelledby="latest-heading" className="space-y-3">
+          <h2 id="latest-heading" className="text-sm font-medium text-muted-foreground">
+            Latest episode:{' '}
+            <Link href={`${podcast.path}/${latest.slug}`} className="text-foreground underline underline-offset-4 hover:text-muted-foreground">
+              {latest.title}
+            </Link>
+          </h2>
+          <YouTubeEmbed id={latest.youtubeId} title={`${podcast.name}: ${latest.title}`} />
+        </section>
+      )}
 
       <ol className="space-y-8">
         {episodes.map((e) => (
