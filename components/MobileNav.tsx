@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icons for menu button
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/Logo";
+import { navItems } from "@/lib/nav";
 import {
   Sheet,
   SheetContent,
@@ -13,21 +14,6 @@ import {
   SheetTrigger,
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
-
-// Define navigation items type (optional but good practice)
-interface NavItem {
-  href: string;
-  title: string;
-  external?: boolean;
-}
-
-const navItems: NavItem[] = [
-  { href: "/", title: "Home" },
-  { href: "/projects", title: "Work & experiments" },
-  { href: "/speaking", title: "Speaking" },
-  { href: "https://www.youtube.com/@edunge", title: "YouTube", external: true }, // Replace link
-  { href: "/writing", title: "Writing" },
-];
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +47,7 @@ export function MobileNav() {
           {navItems.map((item) =>
             item.external ? (
               <a
-                key={item.title}
+                key={item.href}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +58,7 @@ export function MobileNav() {
               </a>
             ) : (
               <Link
-                key={item.title}
+                key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
