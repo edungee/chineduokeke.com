@@ -69,6 +69,13 @@ milestones:
       style remains a trial pending a complete episode assessment; no audience
       or retention result is claimed.
     evidenceUrl: https://www.youtube.com/watch?v=TMCa-Z7BZoI
+  - id: full-narration-handoff
+    date: '2026-10-19'
+    kind: decision
+    title: Made full narration the canonical handoff
+    summary: Replaced mandatory chapter inputs with one complete narration block and a matching text file for each approved script.
+    rationale: Carry the full story into voice production without requiring the editor to assemble fragments or strip out production directions.
+    evidence: The revised workflow keeps headings, citations, drawing directions, music and sound-effects notes outside spoken narration. Chapter files remain optional repair assets; the change does not establish faster production or improved audience results.
 workflow:
   - Choose a question
   - Research and verify
@@ -100,6 +107,8 @@ A story starts with a question about the business of football. The research need
 Notion organises the story, sources, script and production materials. Scheduled research supports topic scouting and verification. Voiceover preparation, visual planning and caption timing help carry the story into the final edit in DaVinci Resolve.
 
 The handoffs matter as much as the individual tools. A well-timed caption file, for example, helps connect narration to the visual sequence.
+
+The current voice handoff uses one complete narration block and a matching text file. Visual directions, citations and audio production notes stay separate, while chapter files remain available for targeted repairs.
 
 ## Evidence and learning
 

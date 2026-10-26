@@ -46,6 +46,20 @@ milestones:
     summary: Moved from approving each complaint to authorisation at checkout, followed by operator confirmation of paid cases before filing.
     rationale: Reduce repeated owner approval steps while retaining an explicit evidence check and a clear route for rejecting unsupported cases.
     evidence: The revised requirements place paid cases in a confirmation queue, call for a refund when a copy cannot be confirmed, and measure the proposed 24-hour filing window from payment. These are workflow requirements, not evidence of achieved response times or successful removals.
+  - id: lean-outreach-trial
+    date: '2026-10-20'
+    title: Scoped a small first outreach trial
+    kind: Product decision
+    summary: Defined a first batch of ten individually checked outreach emails, followed by manual handling of the first paid cases.
+    rationale: Test demand and operating effort before committing to a larger launch, with separate readiness checks before outreach and before accepting payment.
+    evidence: The launch checklist sets out the trial and its prerequisites. It does not establish that the emails were sent, customers paid or cases were resolved.
+  - id: separate-outreach-and-service-email
+    date: '2026-10-21'
+    title: Separated outreach from service communications
+    kind: Product decision
+    summary: Chose a dedicated outbound mailbox, separate from receipts and refund messages, with send-time checks and reply handling.
+    rationale: Keep outreach failures from disrupting case communications and make the mailbox integration portable through standard email protocols.
+    evidence: The requirements specify SMTP and IMAP, suppression checks, pausing follow-ups on replies and stopping on authentication or policy blocks. This records the operational design, not verified sending reliability or conversion results.
 workflow:
   - Find suspected copies
   - Review and explain the evidence
@@ -70,6 +84,8 @@ Can clear evidence help a retailer decide whether to act, and can a controlled w
 - **Separate authorisation from confirmation.** The newer workflow replaces approval of every complaint with owner authorisation at checkout and an operator check before filing.
 - **Make the paid-case boundary explicit.** The design gives paid cases their own confirmation queue and starts the proposed filing clock at payment, including the team’s check.
 - **Keep validation staged.** Reporting, outbound validation, self-service and monitoring remain separate steps rather than one assumed launch.
+- **Start with a small, checked batch.** The first outreach trial is scoped to ten individually reviewed emails and manual handling of initial paid cases, with readiness gates before outreach and payment.
+- **Separate outreach from case messages.** A dedicated mailbox handles prospecting and replies while receipts and refunds use the service communication channel.
 
 ## How the design evolved
 
