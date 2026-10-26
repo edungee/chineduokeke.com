@@ -1,14 +1,14 @@
 ---
-title: When a store gets cloned
+title: CloneBrake — when a store gets copied
 slug: retailer-impersonation
 published: true
 date: '2026-09-24'
 featuredOrder: 5
 category: Discovery
-stage: MVP defined — validation pending
-role: Research, product definition and MVP planning
-description: Exploring a detection-first workflow that helps small retailers review suspected store copies and approve evidence-backed complaints.
-tldr: Developing a detection, review and takedown workflow, with validation gates before broader rollout.
+stage: MVP evolving — outcomes unvalidated
+role: Product definition, branding and workflow design
+description: Developing CloneBrake, an evidence-first workflow for finding copied stores and turning owner authorisation into operator-reviewed action.
+tldr: From a manual-response proposal to a named product with evidence-first review, checkout authorisation and a payment-linked case workflow.
 tools: []
 milestones:
   - id: manual-validation-proposal
@@ -25,35 +25,83 @@ milestones:
     summary: Expanded the initial manual-pilot proposal into a staged plan for detection, operator review, customer reports and owner-approved complaints.
     rationale: Test whether finding and explaining suspected copies creates a useful starting point before scaling takedown workflows or monitoring.
     evidence: The October plan separates setup, detection and reporting, outbound validation, self-service and monitoring. Stage gates are targets to test, not achieved customer or enforcement outcomes.
-workflow: [Find suspected copies, Operator reviews evidence, Owner reviews the report, Owner approves complaints and outcomes are tracked]
-workflowCaption: 'Staged MVP plan — validation gates and takedown outcomes remain unproven.'
+  - id: clonebrake-naming-decision
+    date: '2026-10-01'
+    title: Selected CloneBrake after naming checks
+    kind: Brand decision
+    summary: Used Brand Launch Agent to compare names, investigate collisions and select CloneBrake; purchased the matching .com domain.
+    rationale: Find a distinctive name that suggests intervention without promising removal, with room beyond the initial retail use case.
+    evidence: The naming exercise rejected Cloneward and Impostra after domain or social-name conflicts. Checks informed the choice but did not establish trademark clearance or ownership of unclaimed-looking social handles.
+  - id: evidence-first-review-design
+    date: '2026-10-16'
+    title: Put the evidence before the agent’s recommendation
+    kind: Design decision
+    summary: Revised the report and operator review around side-by-side evidence, plain-language explanations and a separate decision panel.
+    rationale: Make it easier to inspect the underlying comparison before accepting the agent’s call, reducing the risk of rubber-stamping its recommendation.
+    evidence: The approved redesign replaces customer-facing scores with explanations of what was copied and puts proof before the payment decision. This records the design direction, not a measured improvement in review accuracy.
+  - id: authorisation-and-payment-workflow
+    date: '2026-10-17'
+    title: Revised authorisation and the paid-case workflow
+    kind: Product decision
+    summary: Moved from approving each complaint to authorisation at checkout, followed by operator confirmation of paid cases before filing.
+    rationale: Reduce repeated owner approval steps while retaining an explicit evidence check and a clear route for rejecting unsupported cases.
+    evidence: The revised requirements place paid cases in a confirmation queue, call for a refund when a copy cannot be confirmed, and measure the proposed 24-hour filing window from payment. These are workflow requirements, not evidence of achieved response times or successful removals.
+  - id: lean-outreach-trial
+    date: '2026-10-20'
+    title: Scoped a small first outreach trial
+    kind: Product decision
+    summary: Defined a first batch of ten individually checked outreach emails, followed by manual handling of the first paid cases.
+    rationale: Test demand and operating effort before committing to a larger launch, with separate readiness checks before outreach and before accepting payment.
+    evidence: The launch checklist sets out the trial and its prerequisites. It does not establish that the emails were sent, customers paid or cases were resolved.
+  - id: separate-outreach-and-service-email
+    date: '2026-10-21'
+    title: Separated outreach from service communications
+    kind: Product decision
+    summary: Chose a dedicated outbound mailbox, separate from receipts and refund messages, with send-time checks and reply handling.
+    rationale: Keep outreach failures from disrupting case communications and make the mailbox integration portable through standard email protocols.
+    evidence: The requirements specify SMTP and IMAP, suppression checks, pausing follow-ups on replies and stopping on authentication or policy blocks. This records the operational design, not verified sending reliability or conversion results.
+workflow:
+  - Find suspected copies
+  - Review and explain the evidence
+  - Owner authorises at checkout
+  - Operator confirms the paid case
+  - File supported complaints and track outcomes
+workflowCaption: 'Evolving product design — implementation tracking does not establish a validated service or removal outcomes.'
 ---
 
 ## Why this exists
 
-Small retailers who find copies of their stores can struggle to assemble evidence and coordinate an effective response. The original September proposal began with a manual incident-response pilot. The October plan broadens the starting point to finding suspected copies, reviewing evidence and producing a report before preparing complaints.
+Small retailers who find copies of their stores can struggle to assemble evidence and coordinate an effective response. The September proposal began with a manual incident-response pilot. It evolved into CloneBrake: a detection-first product concept that helps an owner understand what has been copied before deciding what to do.
 
 ## What I’m testing
 
-The current direction is a detection-first MVP with operator review. The hypothesis is that a useful report can help an owner decide whether to pursue a takedown. Effectiveness, operating effort and willingness to pay remain unproven.
+Can clear evidence help a retailer decide whether to act, and can a controlled workflow turn that decision into supported complaints? Detection quality, operating effort, willingness to pay and enforcement outcomes still need validation.
 
 ## Key decisions
 
-- **Review evidence before presenting an accusation.** Candidate scores order the operator’s queue; they do not decide what the customer sees.
-- **Keep owner approval in the workflow.** The owner approves each complaint before it is sent.
-- **Use staged validation.** Detection and reporting are followed by outbound and self-service experiments; monitoring comes later.
+- **Choose the name through evidence.** Brand Launch Agent compared candidates and checked domain, social-name and company/product collisions. CloneBrake was selected and the matching domain purchased; those steps do not imply full legal clearance.
+- **Lead with the comparison.** The revised design shows the copied material before the agent’s recommendation. Customer reports explain the evidence in sentences rather than exposing a confidence score.
+- **Separate authorisation from confirmation.** The newer workflow replaces approval of every complaint with owner authorisation at checkout and an operator check before filing.
+- **Make the paid-case boundary explicit.** The design gives paid cases their own confirmation queue and starts the proposed filing clock at payment, including the team’s check.
+- **Keep validation staged.** Reporting, outbound validation, self-service and monitoring remain separate steps rather than one assumed launch.
+- **Start with a small, checked batch.** The first outreach trial is scoped to ten individually reviewed emails and manual handling of initial paid cases, with readiness gates before outreach and payment.
+- **Separate outreach from case messages.** A dedicated mailbox handles prospecting and replies while receipts and refunds use the service communication channel.
 
-## How it would work
+## How the design evolved
 
-The workflow finds suspected copies and collects comparison evidence. An operator reviews candidates before a customer report is released. The owner reviews the evidence and approves proposed complaints; responses and outcomes are tracked separately.
+The original plan kept the owner involved in approving every complaint. The later design moves that authorisation to checkout, while retaining operator confirmation of the evidence. A case that cannot be confirmed should be refunded rather than filed. Routes that require the owner to submit directly remain a separate handoff.
+
+The visual direction evolved too. The October redesign uses annotated comparisons and plain-language explanations to make evidence easier to inspect. Its operator layout places the comparison beside a decision panel, so checking the evidence does not require scrolling past the recommendation.
 
 ## Evidence and learning
 
-A current MVP plan defines detection, triage, reporting and takedown workflows. Engineering progress is being tracked, but this case study does not yet establish a complete working service, public launch or successful enforcement outcomes. The earlier manual-pilot proposal remains in the project history as the starting point.
+The project history preserves the manual-pilot proposal, detection-first plan, naming decision and subsequent workflow revisions. The naming exercise is also a concrete internal use of [Brand Launch Agent](/projects/brand-launch-agent): availability observations changed the shortlist before a name was chosen.
+
+Product and design decisions are supported by the working records. Engineering tasks are tracked separately; this case study does not yet establish a complete working service, public launch, achieved filing times or successful enforcement outcomes. Naming checks were observations at the time, not a continuing guarantee of availability.
 
 ## What’s next
 
-Validate detection quality, operator effort and the usefulness of the report before scaling the service. Test willingness to pay and owner-approved case handling, then use the results to decide whether to expand into self-service and monitoring. The plan’s stage gates remain proposed decision criteria.
+Validate the evidence review and paid-case flow with real cases, measuring detection quality, operator effort and owner understanding. Test willingness to pay and filing performance before treating the proposed service window or broader rollout as proven.
 
 ## Related writing
 
