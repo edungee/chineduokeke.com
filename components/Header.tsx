@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MobileNav } from "@/components/MobileNav";
 import { Logo } from "@/components/Logo";
+import { navItems } from "@/lib/nav";
 
 const Header = () => {
   return (
@@ -28,22 +29,19 @@ const Header = () => {
 
         {/* Desktop Navigation - Centered, styled like reference */}
         <nav className="hidden flex-1 justify-center items-center space-x-3 text-sm font-medium md:flex">
-          {/* Use text-light-accent2 / dark:text-dark-accent2 for link color */}
-          <Link href="/" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Home</Link>
-
-          <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
-
-          <Link href="/projects" className="transition-colors hover:text-foreground/80">Work & experiments</Link>
-          <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>
-          <Link href="/speaking" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Speaking</Link>
-
-          <span className="h-4 w-px bg-border/50" aria-hidden="true"></span>{/* Separator */}
-
-          <a href="https://www.youtube.com/@edunge" target="_blank" rel="noopener noreferrer" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">YouTube</a>
-
-          {/* <span className="h-4 w-px bg-border/50" aria-hidden="true"></span> */}{/* Separator */}
-
-          <Link href="/writing" className="transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80">Writing</Link>
+          {navItems.map((item, i) => {
+            const className = "transition-colors text-light-accent2 dark:text-dark-accent2 hover:text-foreground/80";
+            return (
+              <React.Fragment key={item.href}>
+                {i > 0 && <span className="h-4 w-px bg-border/50" aria-hidden="true" />}
+                {item.external ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>{item.title}</a>
+                ) : (
+                  <Link href={item.href} className={className}>{item.title}</Link>
+                )}
+              </React.Fragment>
+            );
+          })}
         </nav>
 
         {/* Right Side: Theme Toggle */}

@@ -6,17 +6,20 @@ import {
     groupEngagementsByYear,
     // SpeakingEngagement // Removed unused type import
 } from '@/lib/speaking'; // Import functions and type
+import Link from 'next/link';
+import { getEpisodes, podcast } from '@/lib/podcast';
 // import { cn } from '@/lib/utils'; // Removed unused
 
 // Optional: Add metadata
 export const metadata = {
-  title: "Speaking & conversations",
-  description: "Conversations on product and engineering decisions, alongside talks, meetups and mentorship sessions.",
-  alternates: { canonical: '/speaking' },
+  title: "Podcast & talks",
+  description: "Ramblings of B × C, a product and engineering podcast with Chinedu Okeke and Bosun, plus talks, meetups and mentorship sessions.",
+  alternates: { canonical: '/conversations' },
 };
 
-export default async function SpeakingPage() {
+export default async function ConversationsPage() {
   const allEngagements = getSortedSpeakingEngagements();
+  const latestEpisodes = getEpisodes().slice(0, 3);
   const groupedEngagements = groupEngagementsByYear(allEngagements);
   const years = Object.keys(groupedEngagements).sort((a, b) => parseInt(b) - parseInt(a)); // Sort years descending
 
@@ -32,7 +35,7 @@ export default async function SpeakingPage() {
       {/* Page Header */}
       <header className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Speaking &amp; conversations
+          Podcast &amp; talks
         </h1>
         <p className="text-base text-muted-foreground">
           Exploring product and engineering decisions through conversation, alongside talks and sessions with the product management community.
@@ -45,9 +48,18 @@ export default async function SpeakingPage() {
         <p className="text-base leading-relaxed text-muted-foreground">
           Conversations with Bosun about product and engineering decisions, the trade-offs behind what we build, and where our perspectives meet or differ.
         </p>
-        <a href="https://www.youtube.com/@ramblingsofbxc" target="_blank" rel="noopener noreferrer" className="inline-flex text-sm font-medium underline underline-offset-4 hover:text-muted-foreground transition-colors">
-          Watch Ramblings of B × C <span aria-hidden="true" className="ml-1">↗</span>
-        </a>
+        <ul className="space-y-2 text-base">
+          {latestEpisodes.map((e) => (
+            <li key={e.slug}>
+              <Link href={`${podcast.path}/${e.slug}`} className="underline underline-offset-4 hover:text-muted-foreground transition-colors">
+                EP. {String(e.episode).padStart(2, '0')}: {e.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Link href={podcast.path} className="inline-flex text-sm font-medium underline underline-offset-4 hover:text-muted-foreground transition-colors">
+          All episodes and where to listen <span aria-hidden="true" className="ml-1">→</span>
+        </Link>
       </section>
 
       <h2 className="text-2xl font-semibold tracking-tight">Talks &amp; guest appearances</h2>

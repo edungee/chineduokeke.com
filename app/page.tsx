@@ -9,6 +9,7 @@ import {
   TwitterLogo,
   GithubLogo,
   LinkedinLogo,
+  YoutubeLogo,
   EnvelopeSimple,
 } from "@phosphor-icons/react/dist/ssr"; // Use ssr import for server components
 
@@ -49,6 +50,9 @@ export default async function HomePage() {
             </a>
             <a href="https://www.linkedin.com/in/chinedu-okeke/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
               <LinkedinLogo size={20} />
+            </a>
+            <a href="https://www.youtube.com/@edunge" target="_blank" rel="noopener noreferrer" title="YouTube" className="text-muted-foreground hover:text-foreground transition-colors">
+              <YoutubeLogo size={20} />
             </a>
             <a href="mailto:okekechinedu@yahoo.com" title="Email" className="text-muted-foreground hover:text-foreground transition-colors">
               <EnvelopeSimple size={20} />
@@ -100,9 +104,9 @@ export default async function HomePage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">Speaking & conversations</h2>
-        <p className="text-sm text-muted-foreground">Conversations about product management, career decisions and building useful things.</p>
-        <Link href="/speaking" className="text-sm underline underline-offset-4">Explore talks and interviews →</Link>
+        <h2 className="text-xl font-semibold tracking-tight">Podcast & talks</h2>
+        <p className="text-sm text-muted-foreground">Ramblings of B × C, a podcast with Bosun on product and engineering decisions, plus talks on product management and careers.</p>
+        <Link href="/conversations" className="text-sm underline underline-offset-4">Listen and explore talks →</Link>
       </section>
       <section className="space-y-4 border-t pt-8">
         <h2 className="text-xl font-semibold tracking-tight">Away from the keyboard</h2>
