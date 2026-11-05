@@ -31,6 +31,13 @@ milestones:
     summary: Included a YouTube embed on the personal website case study.
     rationale: Let visitors see the project in action alongside its written description.
     evidence: The repository records the video embed on 12 May and an updated video URL on 13 May 2025.
+  - id: markdown-video-support
+    date: '2026-08-11'
+    title: Added inline video to Markdown writing
+    kind: Implementation
+    summary: Enabled video clips in Markdown posts, with playback controls and shared image and video styling.
+    rationale: Show a product interaction beside its explanation while keeping posts in plain Markdown and giving readers control over motion.
+    evidence: The 11 August renderer change recognises video file extensions, renders muted inline video with controls and unwraps standalone media from paragraph tags. This records an implemented capability, not a measured engagement or accessibility outcome.
   - id: search-and-sharing-foundations
     date: '2026-09-29'
     title: Added search and sharing foundations
@@ -45,6 +52,13 @@ milestones:
     summary: Connected ongoing work evidence to proposed website updates, a combined preview and a draft PR for review.
     rationale: Keep the website current while checking claims and retaining control over what becomes public.
     evidence: The personal pilot completed a scheduled run on 5 October, producing a draft PR and verified preview. Source backfill remained partial; the workflow does not automatically merge or publish changes.
+  - id: podcast-and-conversations-pages
+    date: '2026-10-21'
+    title: Added a home for the podcast and its episodes
+    kind: Implementation
+    summary: Added a podcast index and individual episode pages with listening links, video embeds and structured metadata.
+    rationale: Give each conversation a stable place on the site that visitors can browse and share, alongside projects and writing.
+    evidence: The merged changes add podcast routes to the sitemap, episode metadata and shared navigation, and redirect the former Speaking page to Conversations. This records site capabilities, not measured discovery or listening growth.
 ---
 
 
@@ -53,7 +67,7 @@ This project aimed to create a simple, fast, and easily maintainable personal we
 
 ## How it has evolved
 
-The site now includes project histories alongside writing and speaking. Search and sharing foundations include structured metadata, a generated sitemap, canonical URLs and social preview cards drawn from page content. These are implemented capabilities; their effect on discovery and engagement remains unmeasured.
+The site now includes project histories alongside writing, [conversations](/conversations) and a dedicated [Ramblings of B × C podcast section](/podcast). Individual episode pages bring together listening links, embedded video and show notes. Search and sharing foundations include structured metadata, a generated sitemap, canonical URLs and social preview cards drawn from page content. These are implemented capabilities; their effect on discovery and engagement remains unmeasured.
 
 The project history records substantial site improvements as they are made. Proposed updates remain subject to PR review before publication.
 
