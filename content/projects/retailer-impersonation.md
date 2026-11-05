@@ -60,6 +60,13 @@ milestones:
     summary: Chose a dedicated outbound mailbox, separate from receipts and refund messages, with send-time checks and reply handling.
     rationale: Keep outreach failures from disrupting case communications and make the mailbox integration portable through standard email protocols.
     evidence: The requirements specify SMTP and IMAP, suppression checks, pausing follow-ups on replies and stopping on authentication or policy blocks. This records the operational design, not verified sending reliability or conversion results.
+  - id: evidence-gated-report-release
+    date: '2026-10-27'
+    title: Tightened the report release checks
+    kind: Product decision
+    summary: Required human-confirmed copies and visible matched evidence before an outbound report can be released, with an explicit review of warnings.
+    rationale: Shared supplier photos and legitimate stockists can resemble copies. Keep that uncertainty visible before making a claim to a store owner.
+    evidence: The revised handoff adds a block for missing matched photos or copied words, warnings for established domains, and a preview using the actual customer report component. These are design requirements; their implementation and effect on false positives have not been independently verified here.
 workflow:
   - Find suspected copies
   - Review and explain the evidence
@@ -86,6 +93,7 @@ Can clear evidence help a retailer decide whether to act, and can a controlled w
 - **Keep validation staged.** Reporting, outbound validation, self-service and monitoring remain separate steps rather than one assumed launch.
 - **Start with a small, checked batch.** The first outreach trial is scoped to ten individually reviewed emails and manual handling of initial paid cases, with readiness gates before outreach and payment.
 - **Separate outreach from case messages.** A dedicated mailbox handles prospecting and replies while receipts and refunds use the service communication channel.
+- **Check the report before releasing it.** Outbound reports should contain only human-confirmed copies with matched evidence. Review warnings about possible stockists or shared supplier images, and preview the same report component the owner will see.
 
 ## How the design evolved
 

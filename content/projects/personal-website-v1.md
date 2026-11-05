@@ -31,6 +31,13 @@ milestones:
     summary: Included a YouTube embed on the personal website case study.
     rationale: Let visitors see the project in action alongside its written description.
     evidence: The repository records the video embed on 12 May and an updated video URL on 13 May 2025.
+  - id: markdown-video-support
+    date: '2026-08-11'
+    title: Added inline video to Markdown writing
+    kind: Implementation
+    summary: Enabled video clips in Markdown posts, with playback controls and shared image and video styling.
+    rationale: Show a product interaction beside its explanation while keeping posts in plain Markdown and giving readers control over motion.
+    evidence: The 11 August renderer change recognises video file extensions, renders muted inline video with controls and unwraps standalone media from paragraph tags. This records an implemented capability, not a measured engagement or accessibility outcome.
   - id: search-and-sharing-foundations
     date: '2026-09-29'
     title: Added search and sharing foundations
