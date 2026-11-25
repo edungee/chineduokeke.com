@@ -15,6 +15,7 @@ export const podcast = {
     youtube: 'https://www.youtube.com/@ramblingsofbxc',
     spotify: 'https://open.spotify.com/show/3GiguKVwUS2T0qJhoZOMbj',
     apple: 'https://podcasts.apple.com/gb/podcast/ramblings-of-b-x-c/id6806932491',
+    amazon: 'https://music.amazon.com/podcasts/9fcaa910-b173-4167-9b34-b8d57aa20e37',
   },
 }
 
@@ -65,6 +66,7 @@ export function listenLinks(e?: Pick<Episode, 'youtubeId' | 'spotify' | 'apple'>
     { label: 'YouTube', href: e?.youtubeId ? youtubeUrl(e.youtubeId) : podcast.links.youtube },
     { label: 'Spotify', href: e?.spotify || podcast.links.spotify },
     { label: 'Apple Podcasts', href: e?.apple || podcast.links.apple },
+    { label: 'Amazon Music', href: podcast.links.amazon },
   ].filter((l) => l.href)
 }
 
