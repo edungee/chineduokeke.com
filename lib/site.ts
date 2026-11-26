@@ -2,12 +2,12 @@
 export const siteConfig = {
   url: 'https://www.chineduokeke.com',
   name: 'Chinedu Okeke',
-  jobTitle: 'Senior Product Manager',
+  jobTitle: 'Product Manager',
   employer: { name: 'Anaplan', url: 'https://www.anaplan.com' },
   location: 'United Kingdom',
   twitterHandle: '@edunge',
   description:
-    'Chinedu Okeke is a Senior Product Manager at Anaplan in the UK, working on platforms, data and enterprise software, and writing about building trustworthy AI products.',
+    'Chinedu Okeke is a product manager at Anaplan in the UK, working on data, APIs and platform, and writing about building trustworthy AI products.',
   knowsAbout: [
     'Product management',
     'Platform product strategy',
