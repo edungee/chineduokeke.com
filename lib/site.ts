@@ -6,6 +6,8 @@ export const siteConfig = {
   employer: { name: 'Anaplan', url: 'https://www.anaplan.com' },
   location: 'United Kingdom',
   twitterHandle: '@edunge',
+  // Headshot used in the Person schema. Keep it the same photo as LinkedIn and other profiles.
+  image: '/img/chinedu-okeke.jpg',
   description:
     'Chinedu Okeke is a product manager at Anaplan in the UK, working on data, APIs and platform, and writing about building trustworthy AI products.',
   knowsAbout: [
@@ -35,6 +37,13 @@ export function personJsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     jobTitle: siteConfig.jobTitle,
+    image: {
+      '@type': 'ImageObject',
+      url: absoluteUrl(siteConfig.image),
+      width: 800,
+      height: 800,
+      caption: siteConfig.name,
+    },
     worksFor: { '@type': 'Organization', ...siteConfig.employer },
     homeLocation: { '@type': 'Place', name: siteConfig.location },
     description: siteConfig.description,
